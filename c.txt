@@ -1,0 +1,99 @@
+main.cpp
+-----------------------------------------------------
+#include <iostream>
+#include "DriversLicense.h"
+
+int main() {
+    std::string imie, nazwisko, miasto;
+    int wiek;
+
+    std::cout << "Enter your name: ";
+    std::cin >> imie;
+    std::cout << "Enter your surname: ";
+    std::cin >> nazwisko;
+    std::cout << "Enter your age: ";
+    std::cin >> wiek;
+    std::cout << "Enter your city: ";
+    std::cin >> miasto;
+
+    DriversLicense user(imie, nazwisko, wiek, miasto);
+
+    user.displayInfo();
+
+    user.verifyAge();
+
+    return 0;
+}
+
+-----------------------------------------------------
+DriversLicense.cpp
+-----------------------------------------------------
+#include <iostream>
+#include "DriversLicense.h"
+
+DriversLicense::DriversLicense(std::string i, std::string n, int w, std::string m)
+    : imie(i), nazwisko(n), wiek(w), miasto(m) {
+}
+
+std::string DriversLicense::getImie() {
+    return imie;
+}
+
+std::string DriversLicense::getNazwisko() {
+    return nazwisko;
+}
+
+int DriversLicense::getWiek() {
+    return wiek;
+}
+
+std::string DriversLicense::getMiasto() {
+    return miasto;
+}
+
+void DriversLicense::displayInfo() {
+    std::cout << "Driver's License Info:\n";
+    std::cout << "Name: " << imie << "\n";
+    std::cout << "Surname: " << nazwisko << "\n";
+    std::cout << "Age: " << wiek << "\n";
+    std::cout << "City: " << miasto << "\n";
+}
+
+void DriversLicense::verifyAge() {
+    if (wiek >= 18) {
+        std::cout << imie << " is eligible for a driver's license.\n";
+    }
+    else {
+        std::cout << imie << " is NOT eligible for a driver's license.\n";
+    }
+}
+
+-----------------------------------------------------
+DriversLicense.h
+-----------------------------------------------------
+#ifndef DRIVERSLICENSE_H
+#define DRIVERSLICENSE_H
+
+#include <string>
+
+class DriversLicense {
+private:
+    std::string imie;
+    std::string nazwisko;
+    int wiek;
+    std::string miasto;
+
+public:
+    DriversLicense(std::string i, std::string n, int w, std::string m);
+
+    std::string getImie();
+    std::string getNazwisko();
+    int getWiek();
+    std::string getMiasto();
+
+    void displayInfo();
+
+    void verifyAge();
+};
+
+#endif
