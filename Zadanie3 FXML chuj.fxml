@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="473.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text fx:id="logintext" layoutX="23.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login" />
+      <Text fx:id="passwordtext" layoutX="23.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
+      <Text fx:id="repeatpasstext" layoutX="23.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Repeat Pass" />
+      <Text fx:id="emailtext" layoutX="23.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-Mail" />
+      <TextField fx:id="loginfield" layoutX="107.0" layoutY="21.0" />
+      <TextField fx:id="passwordfield" layoutX="107.0" layoutY="48.0" />
+      <TextField fx:id="repeatpassfield" layoutX="107.0" layoutY="74.0" />
+      <TextField fx:id="emailfield" layoutX="107.0" layoutY="100.0" />
+      <Text fx:id="educationtext" layoutX="23.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Education" />
+      <Text fx:id="gendertext" layoutX="23.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gender" />
+      <Text fx:id="languagetext" layoutX="27.0" layoutY="318.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Language" />
+      <Text fx:id="hobbystext" layoutX="25.0" layoutY="397.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hobbys" />
+      <Button fx:id="loaddatabutton" layoutX="108.0" layoutY="426.0" mnemonicParsing="false" onMousePressed="#loadDataFromFile" text="Load Data From File" />
+      <Button fx:id="registerbutton" layoutX="419.0" layoutY="426.0" mnemonicParsing="false" onMousePressed="#register" text="Register" />
+      <RadioButton fx:id="gendermale" layoutX="104.0" layoutY="207.0" mnemonicParsing="false" text="Male" />
+      <RadioButton fx:id="genderfemale" layoutX="104.0" layoutY="231.0" mnemonicParsing="false" text="Female" textAlignment="CENTER" />
+      <RadioButton fx:id="genderunknwon" layoutX="104.0" layoutY="256.0" mnemonicParsing="false" text="Unknown" />
+      <ChoiceBox fx:id="educationchoice" layoutX="104.0" layoutY="149.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="languagechoice" layoutX="108.0" layoutY="301.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="hobbyschoice" layoutX="106.0" layoutY="380.0" prefWidth="150.0" />
+      <CheckBox fx:id="a1" layoutX="24.0" layoutY="335.0" mnemonicParsing="false" text="A1" />
+      <CheckBox fx:id="a2" layoutX="72.0" layoutY="335.0" mnemonicParsing="false" text="A2" />
+      <CheckBox fx:id="b1" layoutX="120.0" layoutY="335.0" mnemonicParsing="false" text="B1" />
+      <CheckBox fx:id="b2" layoutX="167.0" layoutY="335.0" mnemonicParsing="false" text="B2" />
+      <CheckBox fx:id="c1" layoutX="216.0" layoutY="335.0" mnemonicParsing="false" text="C1" />
+      <CheckBox fx:id="c2" layoutX="268.0" layoutY="335.0" mnemonicParsing="false" text="C2" />
+      <TextArea fx:id="textarea" layoutX="318.0" layoutY="223.0" prefHeight="191.0" prefWidth="260.0" />
+      <ImageView fx:id="image" fitHeight="191.0" fitWidth="260.0" layoutX="318.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>
